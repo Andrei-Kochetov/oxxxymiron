@@ -1,0 +1,34 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+}
+
+.socials {
+  @include flex-center;
+  justify-content: flex-end;
+  column-gap: 10px;
+
+  svg {
+    fill: $light;
+    transition: fill 0.5s;
+    &:hover {
+      fill: $action;
+    }
+  }
+}
+
+.nav-menu {
+  @include flex-center;
+  column-gap: 16px;
+  &__item {
+    a {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      transition: color 0.5s;
+      &:hover {
+        color: $action;
+      }
+    }
+  }
+}

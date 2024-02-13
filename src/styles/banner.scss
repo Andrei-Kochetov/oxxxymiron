@@ -1,0 +1,14 @@
+.main-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 560px;
+  background: url('../images/main-bg.webp') no-repeat center/contain;
+}
+
+.tour-banner{
+  margin: 50px;
+  video{
+    width: 100%;
+  }
+}

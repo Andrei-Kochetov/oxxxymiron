@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+// TODO заменить анимации на свои и по попробовать сделать собтыие скрола одного компонента самому
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: Inter, Roboto, sans-serif;
+  overflow-x: hidden;
+  background-color: $primary;
+  color: $light;
+}
+
+a {
+  text-decoration: none;
+  color: $light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: $light;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.icon {
+  height: 12px;
+  width: 12px;
+}
+
+.footer {
+  @include flex-space-between;
+  &__logo-year {
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 10px;
+  }
+}

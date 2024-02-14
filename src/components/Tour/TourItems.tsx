@@ -2,25 +2,27 @@ import { Link } from 'react-router-dom';
 import { tourItems } from '../../utils/constants';
 import TourItem from './TourItem';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Section from '../Section/Section';
+import SectionTitle from '../Section/SectionTitle';
 
 const TourItems = () => {
   return (
-    <div className="tour-items__wrapper container">
-      <ScrollAnimation animateIn="fadeInLeft" animateOnce>
-        <h2 className="tour-items__title">Концерты</h2>
+    <Section className="tour-items__wrapper container">
+      <ScrollAnimation animateIn="fadeInLeft" offset={0} animateOnce>
+        <SectionTitle>Концерты</SectionTitle>
+        <span className="tour-items__line line" />
       </ScrollAnimation>
-      <span className="line" />
       <ul>
         {tourItems.map((item, i) => (
-          <ScrollAnimation animateIn="fadeInLeft" delay={i * 100} animateOnce>
+          <ScrollAnimation animateIn="fadeInLeft" delay={i ? i * 100 : 100} offset={5} animateOnce>
             <TourItem {...item} key={i} />
           </ScrollAnimation>
         ))}
       </ul>
-      <Link to="concerts" className="tour-items__link-more-info">
+      <Link to="tour" className="tour-items__link-more-info">
         Все концерты
       </Link>
-    </div>
+    </Section>
   );
 };
 

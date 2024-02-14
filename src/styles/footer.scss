@@ -1,0 +1,40 @@
+.footer {
+  @include flex-space-between;
+  &__logo-year {
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 10px;
+  }
+  &__form-subscribe {
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 10px;
+    & label {
+      display: block;
+      width: 100%;
+      text-align: start;
+      color: $light;
+      font-size: 14px;
+    }
+    & input {
+      background-color: $dark-grey;
+      padding-left: 15px;
+      height: 30px;
+      color: $light;
+      &::placeholder {
+        color: $light;
+      }
+    }
+    & button {
+      @include flex-space-between;
+      height: 30px;
+      width: 100%;
+      transition: background-color 0.5s;
+      cursor: pointer;
+      &:hover{
+        background-color: $action;
+      }
+    }
+  }
+}

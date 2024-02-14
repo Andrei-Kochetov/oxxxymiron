@@ -1,10 +1,10 @@
 import { useScroll, motion, useTransform } from 'framer-motion';
 import { ReactNode, useRef } from 'react';
-import { ISectionProps } from '../../utils/interfaces';
+import { ISection } from '../../utils/interfaces';
 
 // TODO разобраться как работает frame motion, как переписать на чистый react/ts
 
-const Section = ({ children, className }: ISectionProps) => {
+const Section = ({ children, className }: ISection) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

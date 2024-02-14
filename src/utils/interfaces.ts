@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface IMenuItem {
   name: string;
@@ -16,7 +16,11 @@ export interface ISocialItem {
   link: string;
 }
 
-export interface ISectionProps {
+export interface ISection {
   children: ReactNode;
-  className?: string
+  className?: string;
+}
+
+export interface ISectionTitle {
+  children: string;
 }

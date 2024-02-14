@@ -29,6 +29,9 @@
       &:hover {
         color: $action;
       }
+      &.active {
+        color: $action
+      }
     }
   }
 }

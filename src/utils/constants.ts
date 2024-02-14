@@ -2,7 +2,11 @@ import { IMenuItem, ISocialItem } from './interfaces';
 
 export const MENU: IMenuItem[] = [
   {
-    name: 'КОНТАКТЫ',
+    name: 'ГЛАВНАЯ',
+    link: '',
+  },
+  {
+    name: 'КОНЦЕРТЫ',
     link: 'tour',
   },
   {
@@ -12,10 +16,6 @@ export const MENU: IMenuItem[] = [
   {
     name: 'НОВОСТИ',
     link: 'news',
-  },
-  {
-    name: 'OXXXYSHOOP',
-    link: 'shop',
   },
 ];
 

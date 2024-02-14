@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { MENU } from '../../utils/constants';
 
@@ -13,7 +13,7 @@ const NavMenu = () => {
           animateIn="fadeIn"
           delay={i * 100}
         >
-          <Link to={`/${link}`}>{name}</Link>
+          <NavLink to={`/${link}`} >{name}</NavLink>
         </ScrollAnimation>
       ))}
     </nav>

@@ -44,6 +44,7 @@ input {
   border: none;
   background: none;
   outline: none;
+  background-color: $light;
 }
 
 ul,
@@ -72,6 +73,10 @@ h2 {
   padding: 20px 15px;
 }
 
+.main-content {
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -82,12 +87,14 @@ h2 {
   width: 12px;
 }
 
-.footer {
-  @include flex-space-between;
-  &__logo-year {
-    @include flex-center;
-    flex-direction: column;
-    row-gap: 10px;
-    font-size: 10px;
-  }
+.line {
+  display: block;
+  height: 1px;
+  border-top: 1px solid $grey;
+}
+
+.section-title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }

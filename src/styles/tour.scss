@@ -5,12 +5,7 @@
     z-index: 2;
     margin-bottom: 100px;
   }
-  &__link-more-info {
-    @include flex-center;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: underline;
-  }
+
   &__line{
     margin-bottom: 15px;
   }

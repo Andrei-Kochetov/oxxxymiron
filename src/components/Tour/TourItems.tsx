@@ -14,12 +14,12 @@ const TourItems = () => {
       </ScrollAnimation>
       <ul>
         {tourItems.map((item, i) => (
-          <ScrollAnimation animateIn="fadeInLeft" delay={i ? i * 100 : 100} offset={5} animateOnce>
+          <ScrollAnimation animateIn="fadeInLeft" delay={i ? i * 100 : 100} animateOnce>
             <TourItem {...item} key={i} />
           </ScrollAnimation>
         ))}
       </ul>
-      <Link to="tour" className="tour-items__link-more-info">
+      <Link to="tour" className="section-more-link">
         Все концерты
       </Link>
     </Section>

@@ -1,5 +1,10 @@
-// .tracks{
-//   &__title{
+.tracks{
+  position: relative;
+  z-index: 1;
+}
 
-//   }
-// }
+.track-item{
+  &:nth-child(odd){
+    text-align: right;
+  }
+}

@@ -1,4 +1,4 @@
-import { IMenuItem, ISocialItem } from './interfaces';
+import { IMenuItem, ISocialItem, ITourItem, ITrackItem } from './interfaces';
 
 export const MENU: IMenuItem[] = [
   {
@@ -46,7 +46,7 @@ export const SOCIALS: ISocialItem[] = [
   },
 ];
 
-export const tourItems = [
+export const tourItems: ITourItem[] = [
   {
     date: '12/10/2024',
     clubName: 'ONYX',
@@ -71,5 +71,26 @@ export const tourItems = [
     date: '12/10/2024',
     clubName: 'ONYX',
     location: 'Saratov, Russia',
+  },
+];
+
+export const trackItems: ITrackItem[] = [
+  {
+    image: `${process.env.PUBLIC_URL}/images/track1.png`,
+    track: '',
+    releaseDate: '15/04/2023',
+    trackName: 'Track name',
+  },
+  {
+    image: `${process.env.PUBLIC_URL}/images/track2.png`,
+    track: '',
+    releaseDate: '15/04/2023',
+    trackName: 'Track name',
+  },
+  {
+    image: `${process.env.PUBLIC_URL}/images/track3.png`,
+    track: '',
+    releaseDate: '15/04/2023',
+    trackName: 'Track name',
   },
 ];

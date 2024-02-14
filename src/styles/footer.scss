@@ -1,5 +1,6 @@
 .footer {
   @include flex-space-between;
+  margin-top: 40px;
   &__logo-year {
     @include flex-center;
     flex-direction: column;

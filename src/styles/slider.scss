@@ -1,0 +1,23 @@
+.slider {
+  overflow: hidden;
+  &__navigation {
+    display: flex;
+    justify-content: end;
+    column-gap: 10px;
+    &-button {
+      cursor: pointer;
+    }
+    &-prev {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.slide {
+  flex: 0 0 33.33%;
+}
+
+.slides{
+  display: flex;
+  transition: transform 0.5s ease;
+}

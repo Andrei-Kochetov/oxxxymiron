@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 
 const Tracks = () => {
   return (
-    // <Section className="tracks">
-    <div className="tracks">
+
+    <Section className="tracks">
       <SectionTitle>Релизы</SectionTitle>
       {trackItems.map((track, i) => (
         <ScrollAnimation
@@ -23,8 +23,8 @@ const Tracks = () => {
       <Link to="atracks" className="section-more-link">
         Все треки
       </Link>
-    </div>
-    // </Section>
+    </Section>
+
   );
 };
 

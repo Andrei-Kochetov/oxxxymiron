@@ -1,8 +1,8 @@
 import { IIcon } from '../../utils/interfaces';
 
-const Icon = ({ name, width = 20, height = 20 }: IIcon) => {
+const Icon = ({ name, className = '', size = 20 }: IIcon) => {
   return (
-    <svg className={`icon icon-${name}`} style={{ width, height }}>
+    <svg className={`icon icon-${name} ${className}`} style={{ width: size, height: size }}>
       <use
         xlinkHref={`${process.env.PUBLIC_URL}/images/sprite.svg#${name}`}
       ></use>

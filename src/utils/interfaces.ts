@@ -23,10 +23,15 @@ export interface ITrackItem {
   trackName: string;
 }
 
+export interface INewItem {
+  title: string;
+  image: string;
+}
+
 export interface IIcon {
   name: string;
-  width?: number;
-  height?: number;
+  className?: string
+  size?: number;
 }
 
 export interface ISection {
@@ -36,4 +41,8 @@ export interface ISection {
 
 export interface ISectionTitle {
   children: string;
+}
+
+export interface ISlider{
+  slides: INewItem[]
 }

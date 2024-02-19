@@ -1,10 +1,34 @@
-.tracks{
+.tracks {
   position: relative;
   z-index: 1;
 }
 
-.track-item{
-  &:nth-child(odd){
-    text-align: right;
+.track-item {
+  display: grid;
+  grid-template-areas:
+    'image date'
+    'name .';
+  grid-template-columns: 300px 1fr;
+  gap: 15px;
+  text-transform: uppercase;
+  &:nth-child(odd) {
+    margin-left: auto;
+    grid-template-areas:
+      'date image'
+      '. name';
+    grid-template-columns: 1fr 300px;
+    & .track-item__date {
+      justify-self: end;
+    }
+
+  }
+  &__date {
+    grid-area: date;
+  }
+  &__name {
+    grid-area: name;
+  }
+  &__img {
+    grid-area: image;
   }
 }

@@ -1,3 +1,4 @@
+import News from '../News/News';
 import TourBanner from '../Tour/TourBanner';
 import TourItems from '../Tour/TourItems';
 import Tracks from '../Tracks/Tracks';
@@ -10,6 +11,7 @@ const Home = () => {
       <TourItems />
       <TourBanner />
       <Tracks />
+      <News />
     </div>
   );
 };

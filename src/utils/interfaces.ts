@@ -14,6 +14,9 @@ export interface ITourItem {
   date: string;
   clubName: string;
   location: string;
+  sys: {
+    id: string;
+  };
 }
 
 export interface ITrackItem {

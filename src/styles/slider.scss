@@ -14,10 +14,15 @@
 }
 
 .slide {
-  flex: 0 0 33.33%;
+  flex: 0 0 34%;
+  & h3 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
 }
 
-.slides{
+.slides {
   display: flex;
   transition: transform 0.5s ease;
 }

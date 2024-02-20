@@ -6,6 +6,10 @@ import {
   ITrackItem,
 } from './interfaces';
 
+export const MAIN_URL:string = 'https://graphql.contentful.com/content/v1/spaces/n393yj92g8uk/environments/master'
+
+export const ACCESS_TOKEN = '_CFuRtqauZEkPGfQuANL892H8lMdAWV4o5NHVkcj1mQ'
+
 export const MENU: IMenuItem[] = [
   {
     name: 'ГЛАВНАЯ',
@@ -52,33 +56,6 @@ export const SOCIALS: ISocialItem[] = [
   },
 ];
 
-export const tourItems: ITourItem[] = [
-  {
-    date: '12/10/2024',
-    clubName: 'ONYX',
-    location: 'Saratov, Russia',
-  },
-  {
-    date: '12/10/2024',
-    clubName: 'ONYX',
-    location: 'Saratov, Russia',
-  },
-  {
-    date: '12/10/2024',
-    clubName: 'ONYX',
-    location: 'Saratov, Russia',
-  },
-  {
-    date: '12/10/2024',
-    clubName: 'ONYX',
-    location: 'Saratov, Russia',
-  },
-  {
-    date: '12/10/2024',
-    clubName: 'ONYX',
-    location: 'Saratov, Russia',
-  },
-];
 
 export const trackItems: ITrackItem[] = [
   {

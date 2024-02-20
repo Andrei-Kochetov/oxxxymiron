@@ -30,7 +30,7 @@ const Slider = ({ slides }: ISlider) => {
             className="slide"
           >
             <img src={image} alt="image new" />
-            <p>{title}</p>
+            <h3>{title}</h3>
           </ScrollAnimation>
         ))}
       </div>

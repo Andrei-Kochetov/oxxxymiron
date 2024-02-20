@@ -20,7 +20,6 @@
     & .track-item__date {
       justify-self: end;
     }
-
   }
   &__date {
     grid-area: date;
@@ -30,5 +29,11 @@
   }
   &__img {
     grid-area: image;
+    position: relative;
+    cursor: pointer;
+    .icon-pause, .icon-play {
+      @include absolute-center;
+      fill: $light;
+    }
   }
 }

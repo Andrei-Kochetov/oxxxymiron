@@ -83,19 +83,19 @@ export const tourItems: ITourItem[] = [
 export const trackItems: ITrackItem[] = [
   {
     image: `${process.env.PUBLIC_URL}/images/track1.png`,
-    track: '',
+    track: `${process.env.PUBLIC_URL}/tracks/track1.mp3`,
     releaseDate: '2023.04.15',
     trackName: 'лига опасного интернета',
   },
   {
     image: `${process.env.PUBLIC_URL}/images/track2.png`,
-    track: '',
+    track: `${process.env.PUBLIC_URL}/tracks/track2.mp3`,
     releaseDate: '2020.08.24',
     trackName: '1$ klass',
   },
   {
     image: `${process.env.PUBLIC_URL}/images/track3.png`,
-    track: '',
+    track: `${process.env.PUBLIC_URL}/tracks/track3.mp3`,
     releaseDate: '2022.02.12',
     trackName: 'В долгий путь',
   },

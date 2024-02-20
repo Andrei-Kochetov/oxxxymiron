@@ -23,6 +23,16 @@ export interface ITrackItem {
   trackName: string;
 }
 
+export interface ITrackProps {
+  image: string;
+  track: string;
+  releaseDate: string;
+  trackName: string;
+  isPlaying: boolean;
+  currentTrack: string | null;
+  onClick: (track: string) => void;
+}
+
 export interface INewItem {
   title: string;
   image: string;
@@ -30,7 +40,7 @@ export interface INewItem {
 
 export interface IIcon {
   name: string;
-  className?: string
+  className?: string;
   size?: number;
 }
 
@@ -43,6 +53,6 @@ export interface ISectionTitle {
   children: string;
 }
 
-export interface ISlider{
-  slides: INewItem[]
+export interface ISlider {
+  slides: INewItem[];
 }

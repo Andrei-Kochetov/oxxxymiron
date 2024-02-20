@@ -1,10 +1,28 @@
 import { getLocalDateString } from '../../../utils/common';
-import { ITrackItem } from '../../../utils/interfaces';
+import { ITrackProps } from '../../../utils/interfaces';
+import Icon from '../../Icon/Icon';
 
-const Track = ({ image, track, releaseDate, trackName }: ITrackItem) => {
+const Track = ({
+  image,
+  track,
+  releaseDate,
+  trackName,
+  isPlaying,
+  currentTrack,
+  onClick,
+}: ITrackProps) => {
   return (
     <>
-      <img src={image} alt="track image" className="track-item__img" />
+      <div className="track-item__img" onClick={() => onClick(track)}>
+        <img src={image} alt="track image" />
+
+        {isPlaying && currentTrack === track ? (
+          <Icon name="pause" size={100} />
+        ) : (
+          <Icon name="play" size={100} />
+        )}
+      </div>
+
       <p className="track-item__date">{getLocalDateString(releaseDate)}</p>
       <h3 className="track-item__name">{trackName}</h3>
     </>

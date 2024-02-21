@@ -32,7 +32,7 @@ const NewsPage = () => {
               <h3 className="news-page-item__name">{title}</h3>
             </div>
             <Link to={`${sys.id}`} className="news-page-item__button">
-              читать
+              смотреть
               <Icon name="arrow-right" />
             </Link>
           </ScrollAnimation>

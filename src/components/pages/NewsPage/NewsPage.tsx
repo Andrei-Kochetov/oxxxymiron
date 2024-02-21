@@ -15,13 +15,14 @@ const NewsPage = () => {
       {isLoading ? (
         <Spinner />
       ) : (
-        repeatArray(newsItems, 3).map(({ image, title, date, sys }, i) => (
+        newsItems.map(({ image, title, date, sys }, i) => (
           <ScrollAnimation
-            animateIn={i % 2 === 0 ? 'fadeInRight' : 'fadeInLeft'}
+            animateIn='fadeInLeft'
             delay={i * 100}
             className="news-page-item"
             animateOnce
             key={i}
+            offset={50}
           >
             <div className="news-page-item__img">
               <img src={image.url} alt="news image" />

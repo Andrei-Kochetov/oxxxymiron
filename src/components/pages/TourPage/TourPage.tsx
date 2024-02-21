@@ -20,6 +20,7 @@ const TourPage = () => {
               delay={i ? i * 100 : 100}
               animateOnce
               key={item.sys.id}
+              offset={0}
             >
               <TourItem {...item} />
             </ScrollAnimation>

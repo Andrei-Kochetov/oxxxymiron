@@ -19,11 +19,12 @@ const TracksPage = () => {
         trackItems.map(
           ({ track, sys, image, releaseDate, trackName, description }, i) => (
             <ScrollAnimation
-              animateIn={i % 2 === 0 ? 'fadeInRight' : 'fadeInLeft'}
+              animateIn="fadeInLeft"
               delay={i * 100}
               className="tracks-page-item"
               animateOnce
               key={sys.id}
+              offset={0}
             >
               <div
                 className="tracks-page-item__img"

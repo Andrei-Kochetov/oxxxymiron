@@ -121,6 +121,10 @@ h2 {
   width: 100px;
   height: 100px;
   animation: spin 1s linear infinite;
+  &-wrapper {
+    min-height: 20vh;
+    @include flex-center;
+  }
 }
 
 @keyframes spin {

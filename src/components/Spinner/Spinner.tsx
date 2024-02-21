@@ -1,7 +1,11 @@
 import logo from '../../images/logo.webp';
 
 const Spinner = () => {
-  return <img src={logo} alt="spinner" className='spinner'/>;
+  return (
+    <div className="spinner-wrapper">
+      <img src={logo} alt="spinner" className="spinner" />;
+    </div>
+  );
 };
 
-export default Spinner
+export default Spinner;

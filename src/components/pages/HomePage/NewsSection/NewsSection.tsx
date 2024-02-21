@@ -12,7 +12,7 @@ const NewsSection = () => {
   return (
     <Section className="news">
       <SectionTitle>Новости</SectionTitle>
-      {isLoading ? <Spinner /> : <Slider slides={repeatArray(newsItems, 3)} />}
+      {isLoading ? <Spinner /> : <Slider slides={newsItems} />}
       <Link to="news" className="section-more-link">
         Все новости
       </Link>

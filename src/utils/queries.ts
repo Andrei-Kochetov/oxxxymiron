@@ -40,6 +40,7 @@ export const queryNewsItems = `query newsItemCollectionQuery {
       url
     }
     title
+    date
     }
   }
 }`;

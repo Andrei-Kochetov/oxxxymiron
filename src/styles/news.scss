@@ -3,4 +3,42 @@
   flex-direction: column;
   background-color: $primary;
   margin-top: 100px;
+  &-page {
+    &-item {
+      display: grid;
+      grid-template-areas:
+        'image info'
+        'image button';
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 1fr max-content;
+      gap: 15px;
+      margin-bottom: 40px;
+      &__img {
+        grid-area: image;
+      }
+      &__info-section {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+      }
+      &__name {
+        font-size: 30px;
+      }
+      &__button {
+        @include flex-space-between;
+        width: 200px;
+        padding: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        background-color: $light;
+        color: $primary;
+        cursor: pointer;
+        &:hover {
+          background-color: $action;
+        }
+      }
+    }
+  }
 }

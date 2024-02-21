@@ -53,6 +53,10 @@ export interface INewsItem {
   image: {
     url: string;
   };
+  sys: {
+    id: string;
+  }
+  date: string;
 }
 
 export interface IIcon {

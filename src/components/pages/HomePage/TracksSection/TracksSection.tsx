@@ -2,35 +2,14 @@ import SectionTitle from '../../../Title/SectionTitle';
 import Track from './Track';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import Spinner from '../../../Spinner/Spinner';
 import useTracksItems from '../../../../hooks/useTracksItems';
+import useAudioHandler from '../../../../hooks/useAudioHandler';
 
 const TracksSection = () => {
   const { trackItems, isLoading } = useTracksItems();
 
-  const [audio] = useState(new Audio());
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTrack, setCurrentTrack] = useState<null | string>(null);
-
-  const handleClick = (track: string) => {
-    if (isPlaying && audio.src.endsWith(track)) {
-      audio.pause();
-      setIsPlaying(false);
-      return;
-    }
-
-    audio.src = track;
-    audio.play();
-    setCurrentTrack(track);
-    setIsPlaying(true);
-  };
-
-  useEffect(() => {
-    return () => {
-      audio.pause();
-    };
-  }, [audio]);
+  const { handleClick, isPlaying, currentTrack } = useAudioHandler();
 
   return (
     <div className="tracks-section">

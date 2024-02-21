@@ -2,33 +2,12 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import useTracksItems from '../../../hooks/useTracksItems';
 import Spinner from '../../Spinner/Spinner';
 import PageTitle from '../../Title/PageTitle';
-import { useEffect, useState } from 'react';
 import Icon from '../../Icon/Icon';
 import { getLocalDateString } from '../../../utils/common';
+import useAudioHandler from '../../../hooks/useAudioHandler';
 
 const TracksPage = () => {
-  const [audio] = useState(new Audio());
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTrack, setCurrentTrack] = useState<null | string>(null);
-
-  const handleClick = (track: string) => {
-    if (isPlaying && audio.src.endsWith(track)) {
-      audio.pause();
-      setIsPlaying(false);
-      return;
-    }
-
-    audio.src = track;
-    audio.play();
-    setCurrentTrack(track);
-    setIsPlaying(true);
-  };
-
-  useEffect(() => {
-    return () => {
-      audio.pause();
-    };
-  }, [audio]);
+  const { handleClick, isPlaying, currentTrack } = useAudioHandler();
 
   const { trackItems, isLoading } = useTracksItems();
   return (
@@ -59,7 +38,10 @@ const TracksPage = () => {
                 <h3 className="tracks-page-item__name">{trackName}</h3>
                 <p className="tracks-page-item__description">{description}</p>
               </div>
-              <button className="tracks-page-item__button" onClick={()=> handleClick(track.url)}>
+              <button
+                className="tracks-page-item__button"
+                onClick={() => handleClick(track.url)}
+              >
                 слушать
                 {isPlaying && currentTrack === track.url ? (
                   <Icon name="pause" />

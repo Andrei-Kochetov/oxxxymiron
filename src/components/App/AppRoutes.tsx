@@ -3,6 +3,8 @@ import Home from '../pages/HomePage/HomePage';
 import TourPage from '../pages/TourPage/TourPage';
 import TracksPage from '../pages/TracksPage/TracksPage';
 import NewsPage from '../pages/NewsPage/NewsPage';
+import NewsSinglePage from '../pages/NewsSinglePage/NewsSinglePage';
+
 
 const AppRoutes = () => {
   return (
@@ -12,6 +14,7 @@ const AppRoutes = () => {
         <Route path="/tour" element={<TourPage />}></Route>
         <Route path="/atracks" element={<TracksPage />}></Route>
         <Route path="/news" element={<NewsPage />}></Route>
+        <Route path="/news/:id" element={<NewsSinglePage />}></Route>
       </Routes>
     </main>
   );

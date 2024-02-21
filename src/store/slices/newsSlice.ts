@@ -1,15 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { queryNewsItems } from '../../utils/queries';
+import { queryNewsItem, queryNewsItems } from '../../utils/queries';
 import { request } from '../../utils/common';
 import { INewsItem } from '../../utils/interfaces';
 
 export interface newsState {
   newsItems: INewsItem[];
+  newsItem: INewsItem | null;
   isLoading: boolean;
 }
 
 const initialState: newsState = {
   newsItems: [],
+  newsItem: null,
   isLoading: false,
 };
 
@@ -19,6 +21,19 @@ export const getNewsItems = createAsyncThunk<INewsItem[], void>(
     try {
       const { newsItemCollection } = await request(queryNewsItems);
       return newsItemCollection.items;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const getNewsItem = createAsyncThunk<INewsItem, string>(
+  'news/getNewsItem',
+  async (id, thunkAPI) => {
+    try {
+      const { newsItem } = await request(queryNewsItem(id));
+
+      return newsItem;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -39,6 +54,16 @@ export const newsSlice = createSlice({
         state.newsItems = payload;
       })
       .addCase(getNewsItems.rejected, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(getNewsItem.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getNewsItem.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.newsItem = payload;
+      })
+      .addCase(getNewsItem.rejected, (state) => {
         state.isLoading = false;
       });
   },

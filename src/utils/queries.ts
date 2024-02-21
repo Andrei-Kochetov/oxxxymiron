@@ -44,3 +44,20 @@ export const queryNewsItems = `query newsItemCollectionQuery {
     }
   }
 }`;
+
+export const queryNewsItem = (id: string) => `query newsItemEntryQuery {
+  newsItem(id: "${id}") {
+    sys {
+      id
+    }
+    image {
+      url
+    }
+    title
+    date
+    videoDescription
+    video{
+      url
+    }
+  }
+}`;

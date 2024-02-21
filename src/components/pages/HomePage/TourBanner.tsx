@@ -6,7 +6,7 @@ const TourBanner = () => {
     <Section className="tour-banner">
       <div className="container">
         <video autoPlay loop muted>
-          <source src={video} type="video/mp4"></source>
+          <source src={video} type="video/mp4" />
         </video>
       </div>
     </Section>

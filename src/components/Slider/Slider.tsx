@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ISlider } from '../../utils/interfaces';
 import Icon from '../Icon/Icon';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
 
 const Slider = ({ slides }: ISlider) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,14 +24,16 @@ const Slider = ({ slides }: ISlider) => {
         className="slides"
         style={{ transform: `translateX(-${currentSlide * 33.33}%)` }}
       >
-        {slides.map(({ image, title }, i) => (
+        {slides.map(({ image, title, sys: { id } }, i) => (
           <ScrollAnimation
             animateIn="fadeInLeft"
             delay={i * 100}
             className="slide"
           >
-            <img src={image.url} alt="image new" />
-            <h3>{title}</h3>
+            <Link to={`news/${id}`}>
+              <img src={image.url} alt="image new" />
+              <h3>{title}</h3>
+            </Link>
           </ScrollAnimation>
         ))}
       </div>

@@ -50,13 +50,17 @@ export interface ITrackProps {
 
 export interface INewsItem {
   title: string;
+  date: string;
+  videoDescription: string;
   image: {
     url: string;
   };
   sys: {
     id: string;
-  }
-  date: string;
+  };
+  video: {
+    url: string;
+  };
 }
 
 export interface IIcon {

@@ -21,7 +21,6 @@ const TourItem = ({ date, clubName, location }: TourItemProps) => {
             <Icon name="arrow-right" />
           </>
         </Link>
-        <span className="tour-item__line line" />
       </li>
   );
 };

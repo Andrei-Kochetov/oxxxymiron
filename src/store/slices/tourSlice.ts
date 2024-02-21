@@ -26,7 +26,7 @@ export const getTourItems = createAsyncThunk<ITourItem[], void>(
 );
 
 export const tourSlice = createSlice({
-  name: 'counter',
+  name: 'tour',
   initialState,
   reducers: {},
   extraReducers: (builder) => {

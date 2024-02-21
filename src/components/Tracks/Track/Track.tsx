@@ -13,10 +13,10 @@ const Track = ({
 }: ITrackProps) => {
   return (
     <>
-      <div className="track-item__img" onClick={() => onClick(track)}>
-        <img src={image} alt="track image" />
+      <div className="track-item__img" onClick={() => onClick(track.url)}>
+        <img src={image.url} alt="track image" />
 
-        {isPlaying && currentTrack === track ? (
+        {isPlaying && currentTrack === track.url ? (
           <Icon name="pause" size={100} />
         ) : (
           <Icon name="play" size={100} />

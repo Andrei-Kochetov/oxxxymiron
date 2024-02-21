@@ -29,7 +29,7 @@ const Slider = ({ slides }: ISlider) => {
             delay={i * 100}
             className="slide"
           >
-            <img src={image} alt="image new" />
+            <img src={image.url} alt="image new" />
             <h3>{title}</h3>
           </ScrollAnimation>
         ))}

@@ -20,15 +20,26 @@ export interface ITourItem {
 }
 
 export interface ITrackItem {
-  image: string;
-  track: string;
   releaseDate: string;
   trackName: string;
+  image: {
+    url: string;
+  };
+  track: {
+    url: string;
+  };
+  sys: {
+    id: string;
+  };
 }
 
 export interface ITrackProps {
-  image: string;
-  track: string;
+  image: {
+    url: string;
+  };
+  track: {
+    url: string;
+  };
   releaseDate: string;
   trackName: string;
   isPlaying: boolean;
@@ -36,9 +47,11 @@ export interface ITrackProps {
   onClick: (track: string) => void;
 }
 
-export interface INewItem {
+export interface INewsItem {
   title: string;
-  image: string;
+  image: {
+    url: string;
+  };
 }
 
 export interface IIcon {
@@ -57,5 +70,5 @@ export interface ISectionTitle {
 }
 
 export interface ISlider {
-  slides: INewItem[];
+  slides: INewsItem[];
 }

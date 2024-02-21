@@ -93,13 +93,20 @@ h2 {
   border-top: 1px solid $grey;
 }
 
+.page-title {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
 .section {
-  &-title{
+  &-title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
   }
-  &-more-link{
+  &-more-link {
     @include flex-center;
     margin-top: 30px;
     font-weight: 700;
@@ -108,15 +115,19 @@ h2 {
   }
 }
 
-.spinner{
+.spinner {
   display: block;
   margin: 100px auto 0;
-  width: 100px; 
-  height: 100px; 
+  width: 100px;
+  height: 100px;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); } 
-  100% { transform: rotate(360deg); } 
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

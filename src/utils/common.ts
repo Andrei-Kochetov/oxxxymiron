@@ -15,8 +15,7 @@ export const request = async (query: string) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization:
-          `Bearer ${ACCESS_TOKEN}`,
+        Authorization: `Bearer ${ACCESS_TOKEN}`,
       },
       body: JSON.stringify({ query }),
     });
@@ -26,3 +25,11 @@ export const request = async (query: string) => {
     console.log(error);
   }
 };
+
+export const repeatArray = <T>(arr: T[], times: number): T[] => {
+    let repeatedArray: T[] = [];
+    for (let i = 0; i < times; i++) {
+        repeatedArray = repeatedArray.concat(arr);
+    }
+    return repeatedArray;
+}

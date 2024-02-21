@@ -6,17 +6,16 @@
     margin-bottom: 100px;
   }
 
-  &__line{
+  &__line {
     margin-bottom: 15px;
   }
 }
 
 .tour-item {
-  height: 105px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  height: 100px;
+  @include flex-space-between;
   row-gap: 10px;
+  border-bottom: 1px solid $grey;
   &__date {
     font-weight: 900;
     margin-bottom: 15px;

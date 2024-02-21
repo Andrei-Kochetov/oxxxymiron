@@ -1,21 +1,16 @@
 import { Link } from 'react-router-dom';
-import TourItem from './TourItem';
 import ScrollAnimation from 'react-animate-on-scroll';
+
+import TourItem from './TourItem';
+
 import Section from '../Section/Section';
 import SectionTitle from '../Section/SectionTitle';
-import { getTourItems } from '../../store/slices/tourSlice';
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import Spinner from '../Spinner/Spinner';
 
+import useTourItems from '../../hooks/useTourItems';
+
 const TourItems = () => {
-  const dispatch = useAppDispatch();
-
-  const { tourItems, isLoading } = useAppSelector(({ tour }) => tour);
-
-  useEffect(() => {
-    dispatch(getTourItems());
-  }, [dispatch]);
+  const { tourItems, isLoading } = useTourItems();
 
   return (
     <Section className="tour-items__wrapper container">
@@ -34,8 +29,9 @@ const TourItems = () => {
                 animateIn="fadeInLeft"
                 delay={i ? i * 100 : 100}
                 animateOnce
+                key={item.sys.id}
               >
-                <TourItem {...item} key={item.sys.id} />
+                <TourItem {...item} />
               </ScrollAnimation>
             ))
         )}

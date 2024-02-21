@@ -3,11 +3,11 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import TourItem from './TourItem';
 
-import Section from '../Section/Section';
-import SectionTitle from '../Section/SectionTitle';
-import Spinner from '../Spinner/Spinner';
+import Section from '../../../Section/Section';
+import SectionTitle from '../../../Title/SectionTitle';
+import Spinner from '../../../Spinner/Spinner';
 
-import useTourItems from '../../hooks/useTourItems';
+import useTourItems from '../../../../hooks/useTourItems';
 
 const TourItems = () => {
   const { tourItems, isLoading } = useTourItems();

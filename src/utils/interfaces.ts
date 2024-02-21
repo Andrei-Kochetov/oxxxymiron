@@ -22,6 +22,7 @@ export interface ITourItem {
 export interface ITrackItem {
   releaseDate: string;
   trackName: string;
+  description: string;
   image: {
     url: string;
   };

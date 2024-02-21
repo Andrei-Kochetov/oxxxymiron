@@ -25,6 +25,7 @@ export const queryTrackItems = `query trackItemCollectionQuery {
     }
     trackName
     releaseDate
+    description
     }
   }
 }`;

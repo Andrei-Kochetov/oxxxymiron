@@ -1,6 +1,6 @@
-import { getLocalDateString } from '../../../utils/common';
-import { ITrackProps } from '../../../utils/interfaces';
-import Icon from '../../Icon/Icon';
+import { getLocalDateString } from '../../../../utils/common';
+import { ITrackProps } from '../../../../utils/interfaces';
+import Icon from '../../../Icon/Icon';
 
 const Track = ({
   image,
@@ -13,7 +13,7 @@ const Track = ({
 }: ITrackProps) => {
   return (
     <>
-      <div className="track-item__img" onClick={() => onClick(track.url)}>
+      <div className="tracks-section-item__img" onClick={() => onClick(track.url)}>
         <img src={image.url} alt="track image" />
 
         {isPlaying && currentTrack === track.url ? (
@@ -23,8 +23,8 @@ const Track = ({
         )}
       </div>
 
-      <p className="track-item__date">{getLocalDateString(releaseDate)}</p>
-      <h3 className="track-item__name">{trackName}</h3>
+      <p className="tracks-section-item__date">{getLocalDateString(releaseDate)}</p>
+      <h3 className="tracks-section-item__name">{trackName}</h3>
     </>
   );
 };

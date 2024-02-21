@@ -1,7 +1,7 @@
-import News from '../../News/News';
-import TourBanner from '../../Tour/TourBanner';
-import TourItems from '../../Tour/TourItems';
-import Tracks from '../../Tracks/Tracks';
+import News from './NewsSection/NewsSection';
+import TourBanner from './TourBanner';
+import TourItems from './TourSection/TourItems';
+import Tracks from './TracksSection/TracksSection';
 import MainBanner from './MainBanner';
 
 const Home = () => {

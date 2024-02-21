@@ -1,39 +1,79 @@
 .tracks {
-  position: relative;
-  z-index: 1;
-}
-
-.track-item {
-  display: grid;
-  grid-template-areas:
-    'image date'
-    'name .';
-  grid-template-columns: 300px 1fr;
-  gap: 15px;
-  text-transform: uppercase;
-  &:nth-child(odd) {
-    margin-left: auto;
-    grid-template-areas:
-      'date image'
-      '. name';
-    grid-template-columns: 1fr 300px;
-    & .track-item__date {
-      justify-self: end;
-    }
-  }
-  &__date {
-    grid-area: date;
-  }
-  &__name {
-    grid-area: name;
-  }
-  &__img {
-    grid-area: image;
+  &-section {
     position: relative;
-    cursor: pointer;
-    .icon-pause, .icon-play {
-      @include absolute-center;
-      fill: $light;
+    z-index: 1;
+    &-item {
+      display: grid;
+      grid-template-areas:
+        'image date'
+        'name .';
+      grid-template-columns: 300px 1fr;
+      gap: 15px;
+      text-transform: uppercase;
+      &:nth-child(odd) {
+        margin-left: auto;
+        grid-template-areas:
+          'date image'
+          '. name';
+        grid-template-columns: 1fr 300px;
+        & .tracks-section-item__date {
+          justify-self: end;
+        }
+      }
+      &__date {
+        grid-area: date;
+      }
+      &__name {
+        grid-area: name;
+      }
+      &__img {
+        grid-area: image;
+        position: relative;
+        cursor: pointer;
+        .icon-pause,
+        .icon-play {
+          @include absolute-center;
+          fill: $light;
+        }
+      }
+    }
+    
+  }
+  &-page{
+    &-item{
+      display: grid;
+      grid-template-areas:
+      'image info'
+      'image button';
+      grid-template-rows: 1fr min-content;
+      gap: 30px;
+      margin-bottom: 40px;
+      &__img{
+        grid-area: image;
+      }
+      &__info-section{
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+      }
+      &__description{
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 300;
+      }
+      &__name{
+        font-size: 30px;
+      }
+      &__button{
+        grid-area: button;
+        @include flex-space-between;
+        width: 200px;
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: 700;
+      }
     }
   }
 }

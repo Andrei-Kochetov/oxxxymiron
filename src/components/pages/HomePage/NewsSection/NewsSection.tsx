@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import Section from '../Section/Section';
-import SectionTitle from '../Section/SectionTitle';
-import Slider from '../Slider/Slider';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import Section from '../../../Section/Section';
+import SectionTitle from '../../../Title/SectionTitle';
+import Slider from '../../../Slider/Slider';
+import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { useEffect } from 'react';
-import { getNewsItems } from '../../store/slices/newsSlice';
-import Spinner from '../Spinner/Spinner';
-import { repeatArray } from '../../utils/common';
+import { getNewsItems } from '../../../../store/slices/newsSlice';
+import Spinner from '../../../Spinner/Spinner';
+import { repeatArray } from '../../../../utils/common';
 
-const News = () => {
+const NewsSection = () => {
   const dispatch = useAppDispatch();
 
   const { newsItems, isLoading } = useAppSelector(({ news }) => news);
@@ -28,4 +28,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default NewsSection;

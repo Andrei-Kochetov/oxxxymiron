@@ -1,17 +1,13 @@
-// import Section from '../Section/Section';
-import SectionTitle from '../Section/SectionTitle';
-import Track from './Track/Track';
+import SectionTitle from '../../../Title/SectionTitle';
+import Track from './Track';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { getTrackItems } from '../../store/slices/tracksSlice';
-import Spinner from '../Spinner/Spinner';
+import Spinner from '../../../Spinner/Spinner';
+import useTracksItems from '../../../../hooks/useTracksItems';
 
-const Tracks = () => {
-  const dispatch = useAppDispatch();
-
-  const { trackItems, isLoading } = useAppSelector(({ track }) => track);
+const TracksSection = () => {
+  const { trackItems, isLoading } = useTracksItems();
 
   const [audio] = useState(new Audio());
   const [isPlaying, setIsPlaying] = useState(false);
@@ -31,17 +27,13 @@ const Tracks = () => {
   };
 
   useEffect(() => {
-    dispatch(getTrackItems());
-  }, [dispatch]);
-
-  useEffect(() => {
     return () => {
       audio.pause();
     };
   }, [audio]);
 
   return (
-    <div className="tracks">
+    <div className="tracks-section">
       <SectionTitle>Треки</SectionTitle>
       {isLoading ? (
         <Spinner />
@@ -52,7 +44,7 @@ const Tracks = () => {
             <ScrollAnimation
               animateIn={i % 2 === 0 ? 'fadeInRight' : 'fadeInLeft'}
               delay={i * 100}
-              className="track-item"
+              className="tracks-section-item"
               animateOnce
               key={track.sys.id}
             >
@@ -72,4 +64,4 @@ const Tracks = () => {
   );
 };
 
-export default Tracks;
+export default TracksSection;

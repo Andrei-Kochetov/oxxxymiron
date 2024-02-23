@@ -98,6 +98,12 @@ h2 {
   line-height: 40px;
   font-weight: 900;
   margin: 20px 0;
+  @media screen and (max-width: 992px){
+   font-size: 34px;
+  }
+  @media screen and (max-width: 768px){
+    font-size: 30px;
+   }
 }
 
 .section {

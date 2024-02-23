@@ -20,6 +20,9 @@
 .nav-menu {
   @include flex-center;
   column-gap: 16px;
+  // @media screen and (max-width: 768px){
+  //   display: none;
+  // }
   &__item {
     a {
       font-weight: 700;

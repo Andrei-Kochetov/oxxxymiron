@@ -10,11 +10,17 @@
     flex-direction: column;
     row-gap: 5px;
     font-size: 10px;
+    @media screen and (max-width: 575px) {
+      order: 2;
+    }
   }
   &__form-subscribe {
     @include flex-center;
     flex-direction: column;
     row-gap: 10px;
+    @media screen and (max-width: 575px) {
+      order: 1;
+    }
     & label {
       display: block;
       width: 100%;

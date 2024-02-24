@@ -11,6 +11,7 @@ const Track = ({
   currentTrack,
   onClick,
 }: ITrackProps) => {
+
   return (
     <>
       <div

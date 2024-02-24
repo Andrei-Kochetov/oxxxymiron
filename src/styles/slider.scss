@@ -28,6 +28,13 @@
       max-width: 250px;
     }
   }
+  @media screen and (max-width: 575px) {
+    flex: 0 0 100%;
+    & img{
+      max-width: 300px;
+    }
+  }
+
   & h3 {
     margin-top: 20px;
     text-transform: uppercase;

@@ -20,10 +20,11 @@ const Slider = ({ slides }: ISlider) => {
     );
   };
 
-
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 992) {
+      if (window.innerWidth <= 575) {
+        setSlidesPerView(1);
+      } else if (window.innerWidth <= 992) {
         setSlidesPerView(2);
       } else {
         setSlidesPerView(3);

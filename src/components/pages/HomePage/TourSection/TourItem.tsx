@@ -10,7 +10,7 @@ interface TourItemProps {
 const TourItem = ({ date, clubName, location }: TourItemProps) => {
   return (
     <li className="tour-item">
-      <div>
+      <div className='tour-item__wrapper-date-club-name'>
         <p className="tour-item__date">{date}</p>
         <p className="tour-item__club-name">{clubName}</p>
       </div>

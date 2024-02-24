@@ -1,6 +1,10 @@
 .footer {
   @include flex-space-between;
   margin-top: 40px;
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    gap: 20px;
+  }
   &__logo-year {
     @include flex-center;
     flex-direction: column;

@@ -13,17 +13,22 @@ const Track = ({
 }: ITrackProps) => {
   return (
     <>
-      <div className="tracks-section-item__img" onClick={() => onClick(track.url)}>
+      <div
+        className="tracks-section-item__img"
+        onClick={() => onClick(track.url)}
+      >
         <img src={image.url} alt="track image" />
 
         {isPlaying && currentTrack === track.url ? (
-          <Icon name="pause" size={100} />
+          <Icon name="pause" className="tracks-section-item__icon" />
         ) : (
-          <Icon name="play" size={100} />
+          <Icon name="play" className="tracks-section-item__icon" />
         )}
       </div>
 
-      <p className="tracks-section-item__date">{getLocalDateString(releaseDate)}</p>
+      <p className="tracks-section-item__date">
+        {getLocalDateString(releaseDate)}
+      </p>
       <h3 className="tracks-section-item__name">{trackName}</h3>
     </>
   );

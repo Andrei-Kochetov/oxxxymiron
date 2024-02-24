@@ -28,7 +28,7 @@ const NewsSinglePage = () => {
           <h3 className="news-single-page__date">
             {getLocalDateString(newsItem.date)}
           </h3>
-          <video className="news-single-page__video" autoPlay controls>
+          <video className="news-single-page__video" autoPlay controls playsInline>
             <source src={newsItem.video.url} type="video/mp4" />
           </video>
           <h3 className="news-single-page__video-description">

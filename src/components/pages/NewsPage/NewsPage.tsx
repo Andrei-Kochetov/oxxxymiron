@@ -31,7 +31,7 @@ const NewsPage = () => {
               <p className="news-page-item__date">{getLocalDateString(date)}</p>
               <h3 className="news-page-item__name">{title}</h3>
             </div>
-            <Link to={`${sys.id}`} className="news-page-item__button">
+            <Link to={`${sys.id}`} className="news-page-item__button button">
               смотреть
               <Icon name="arrow-right" />
             </Link>

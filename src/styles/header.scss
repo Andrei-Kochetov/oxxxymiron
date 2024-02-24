@@ -20,7 +20,7 @@
 .nav-menu {
   @include flex-center;
   column-gap: 16px;
-  @media screen and (max-width: 575px){
+  @media screen and (max-width: 768px) {
     display: none;
   }
   &__item {
@@ -29,12 +29,57 @@
       font-size: 12px;
       line-height: 15px;
       transition: color 0.5s;
-      &:hover {
+      &:hover,
+      &.active {
         color: $action;
       }
-      &.active {
-        color: $action
+    }
+  }
+}
+
+.mobile-menu {
+  margin-left: auto;
+  display: none;
+  overflow-y: hidden;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  &__humburger,
+  &__icon-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    fill: $light;
+  }
+
+  &__items {
+    &-wrapper {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      transition: transform 0.5s;
+      transform: translateX(100%);
+      &_active {
+        transform: translateX(0);
+
       }
+    }
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    gap: 40px;
+  }
+  &__item {
+    &:hover,
+    &.active {
+      color: $action;
     }
   }
 }

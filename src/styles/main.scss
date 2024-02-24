@@ -125,6 +125,12 @@ h2 {
   }
 }
 
+.button{
+  @media screen and (hover: none) {
+    background-color: $light;
+  }
+}
+
 .spinner {
   display: block;
   margin: 100px auto 0;

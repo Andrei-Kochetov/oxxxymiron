@@ -19,6 +19,7 @@
         column-gap: 15px;
       }
       @media screen and (max-width: 575px) {
+        gap: 5px;
         grid-template-areas:
           'image date'
           'image name';
@@ -38,7 +39,6 @@
           grid-template-columns: 1fr 250px;
         }
         @media screen and (max-width: 575px) {
-          column-gap: 5px;
           grid-template-areas:
             'date image'
             'name image';
@@ -58,13 +58,16 @@
       }
       &__date {
         grid-area: date;
+        @media screen and (max-width: 575px) {
+          font-size: 12px;
+        }
       }
       &__name {
         grid-area: name;
         @media screen and (max-width: 575px) {
           font-size: 14px;
           line-height: 16px;
-        }  
+        }
       }
       &__img {
         grid-area: image;
@@ -108,7 +111,6 @@
           'button button';
       }
       @media screen and (max-width: 575px) {
-        
         gap: 10px;
       }
       &__img {
@@ -140,13 +142,14 @@
         }
       }
       &__button {
-        grid-area: button;
         @include flex-space-between;
+        grid-area: button;
         width: 200px;
-        cursor: pointer;
-        text-transform: uppercase;
         padding: 10px;
+        color: $primary;
+        cursor: pointer;
         font-weight: 700;
+        text-transform: uppercase;
         transition: background-color 0.5s;
         &:hover {
           background-color: $action;

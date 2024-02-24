@@ -40,7 +40,7 @@ const TracksPage = () => {
                 <p className="tracks-page-item__description">{description}</p>
               </div>
               <button
-                className="tracks-page-item__button"
+                className="tracks-page-item__button button"
                 onClick={() => handleClick(track.url)}
               >
                 слушать

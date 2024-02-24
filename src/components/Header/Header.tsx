@@ -2,6 +2,7 @@ import Logo from '../Logo/Logo';
 import NavMenu from '../NavMenu/NavMenu';
 
 import Socials from '../Socials/Socials';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
       <Logo />
       <NavMenu />
       <Socials />
+      <MobileMenu />
     </header>
   );
 };

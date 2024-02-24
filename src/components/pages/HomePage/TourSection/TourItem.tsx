@@ -15,7 +15,7 @@ const TourItem = ({ date, clubName, location }: TourItemProps) => {
         <p className="tour-item__club-name">{clubName}</p>
       </div>
       <p className="tour-item__location">{location}</p>
-      <Link to="/#" className="tour-item__button">
+      <Link to="/#" className="tour-item__button button">
         <>
           <p>Билеты</p>
           <Icon name="arrow-right" />

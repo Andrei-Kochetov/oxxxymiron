@@ -51,6 +51,7 @@ const Slider = ({ slides }: ISlider) => {
             animateIn="fadeInLeft"
             delay={i * 100}
             className="slide"
+            key={id}
           >
             <Link to={`news/${id}`}>
               <img src={image.url} alt="image new" />

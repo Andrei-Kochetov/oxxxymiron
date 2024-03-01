@@ -103,7 +103,10 @@
       margin-bottom: 40px;
       @media screen and (max-width: 768px) {
         grid-template-columns: max-content 1fr;
-        margin-bottom: 0;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       @media screen and (max-width: 680px) {
         grid-template-areas:

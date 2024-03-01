@@ -1,8 +1,6 @@
 import { useScroll, motion, useTransform } from 'framer-motion';
-import { ReactNode, useRef } from 'react';
+import { useRef } from 'react';
 import { ISection } from '../../utils/interfaces';
-
-// TODO разобраться как работает frame motion, как переписать на чистый react/ts
 
 const Section = ({ children, className }: ISection) => {
   const ref = useRef(null);

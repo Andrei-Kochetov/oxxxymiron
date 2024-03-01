@@ -7,11 +7,11 @@ interface TourItemProps {
   location: string;
 }
 
-const TourItem = ({ date, clubName, location }: TourItemProps) => {
+const TourItem = ({ clubName, location }: TourItemProps) => {
   return (
     <li className="tour-item">
       <div className='tour-item__wrapper-date-club-name'>
-        <p className="tour-item__date">{date}</p>
+        <p className="tour-item__date">{  ` `}</p>
         <p className="tour-item__club-name">{clubName}</p>
       </div>
       <p className="tour-item__location">{location}</p>

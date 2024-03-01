@@ -3,7 +3,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import TourItem from './TourItem';
 
-import Section from '../../../Section/Section';
 import SectionTitle from '../../../Title/SectionTitle';
 import Spinner from '../../../Spinner/Spinner';
 
@@ -13,7 +12,7 @@ const TourItems = () => {
   const { tourItems, isLoading } = useTourItems();
 
   return (
-    <Section className="tour-items__wrapper container">
+    <div className="tour-items__wrapper container">
       <ScrollAnimation animateIn="fadeInLeft" offset={0} animateOnce>
         <SectionTitle>Концерты</SectionTitle>
         <span className="tour-items__line line" />
@@ -39,7 +38,7 @@ const TourItems = () => {
       <Link to="tour" className="section-more-link">
         Все концерты
       </Link>
-    </Section>
+    </div>
   );
 };
 

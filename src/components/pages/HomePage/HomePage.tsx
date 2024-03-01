@@ -1,5 +1,5 @@
 import News from './NewsSection/NewsSection';
-import TourBanner from './TourBanner';
+import TourBanner from '../NewsSinglePage/TourBanner';
 import TourItems from './TourSection/TourItems';
 import Tracks from './TracksSection/TracksSection';
 import MainBanner from './MainBanner';
